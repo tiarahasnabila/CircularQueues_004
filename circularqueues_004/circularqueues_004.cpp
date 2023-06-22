@@ -3,7 +3,7 @@ using namespace std;
 
 class Queues {
 	int FRONT, REAR, max = 5;
-	int queues_array[5];
+	int queue_array[5];
 
 public:
 	Queues() {
@@ -35,7 +35,7 @@ public:
 			else
 				REAR = REAR + 1;
 		}
-		queues_array[REAR] = num;
+		queue_array[REAR] = num;
 	}
 
 	void remove() {
@@ -44,6 +44,11 @@ public:
 			cout << "Queue underflow\n";
 			return;
 		}
-		cout << "\nThe element deleted from the queue is: " << queues_array[FRONT] << "\n";
+		cout << "\nThe element deleted from the queue is: " << queue_array[FRONT] << "\n";
 
-		
+		//cek jika antrian hanya memiliki satu elemen
+		if (FRONT == REAR) {
+			FRONT = -1;
+				REAR = -1;
+		}
+	
