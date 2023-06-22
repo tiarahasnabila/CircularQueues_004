@@ -70,3 +70,6 @@ public:
 			return;
 		}
 
+		cout << "\nElements is the queue are: \n";
+
+		
